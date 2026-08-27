@@ -11,6 +11,31 @@
 
 ---
 
+## 📁 Repository Structure
+
+```
+PocketStrike/
+├── android/                    # Native Android configurations, ProGuard rules, & NDK bridges
+├── lib/
+│   ├── app/                    # Theme, Glass Tokens, & Router configuration
+│   ├── core/                   # Drift SQLite Database, DAOs, Models, Notifications & Services
+│   │   ├── db/                 # Drift tables & queries
+│   │   ├── models/             # Provider-agnostic chat models & metrics
+│   │   └── services/           # Android notification & background download service
+│   ├── shared/                 # Glassmorphic UI components, code blocks & custom icons
+│   └── features/
+│       ├── agent/              # ReAct Agent Engine, Steps, & Built-in Tools
+│       ├── chat/               # Chat UI shell, input bar, message cards & speed badges
+│       ├── conversations/      # History drawer & thread management
+│       ├── local_models/       # Native GGUF inference runtime, model downloader & presets
+│       ├── mcp/                # MCP protocol client (Streamable HTTP & SSE) & marketplace
+│       ├── providers/          # Multi-provider gateways (OpenAI, Claude, Gemini, DeepSeek, Ollama)
+│       ├── settings/           # Local models, MCP, Storage, API keys, & Hermes memory UI
+│       └── telegram/           # Telegram Bot autonomous background relay service
+└── test/                       # Unit and widget test suite
+```
+---
+
 ## 🌟 Key Features & Highlights
 
 - ⚡ **100% Offline On-Device Native GGUF Inference**: Run state-of-the-art quantized SLMs locally on your phone using ARM NEON multi-threaded CPU acceleration. Zero cloud dependency, zero data leaving your device.
@@ -128,32 +153,6 @@ flutter build apk --release
 ```
 The optimized release APK will be generated at:
 `build/app/outputs/flutter-apk/app-release.apk`
-
----
-
-## 📁 Repository Structure
-
-```
-PocketStrike/
-├── android/                    # Native Android configurations, ProGuard rules, & NDK bridges
-├── lib/
-│   ├── app/                    # Theme, Glass Tokens, & Router configuration
-│   ├── core/                   # Drift SQLite Database, DAOs, Models, Notifications & Services
-│   │   ├── db/                 # Drift tables & queries
-│   │   ├── models/             # Provider-agnostic chat models & metrics
-│   │   └── services/           # Android notification & background download service
-│   ├── shared/                 # Glassmorphic UI components, code blocks & custom icons
-│   └── features/
-│       ├── agent/              # ReAct Agent Engine, Steps, & Built-in Tools
-│       ├── chat/               # Chat UI shell, input bar, message cards & speed badges
-│       ├── conversations/      # History drawer & thread management
-│       ├── local_models/       # Native GGUF inference runtime, model downloader & presets
-│       ├── mcp/                # MCP protocol client (Streamable HTTP & SSE) & marketplace
-│       ├── providers/          # Multi-provider gateways (OpenAI, Claude, Gemini, DeepSeek, Ollama)
-│       ├── settings/           # Local models, MCP, Storage, API keys, & Hermes memory UI
-│       └── telegram/           # Telegram Bot autonomous background relay service
-└── test/                       # Unit and widget test suite
-```
 
 ---
 
